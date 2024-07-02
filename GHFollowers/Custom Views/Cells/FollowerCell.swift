@@ -45,6 +45,5 @@ class FollowerCell: UICollectionViewCell {
             usernameLabel.heightAnchor.constraint(equalToConstant: 20)
             
         ])
-        
     }
 }
