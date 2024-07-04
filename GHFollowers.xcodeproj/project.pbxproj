@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E400D0F32C3750B3007F3058 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E400D0F22C3750B3007F3058 /* GFEmptyStateView.swift */; };
 		E41D77282C316844005321F6 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D77272C316844005321F6 /* UIViewController+Ext.swift */; };
 		E41D772F2C318410005321F6 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D772E2C318410005321F6 /* Follower.swift */; };
 		E41D77312C3184EF005321F6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D77302C3184EF005321F6 /* User.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E400D0F22C3750B3007F3058 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		E41D77272C316844005321F6 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		E41D772E2C318410005321F6 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		E41D77302C3184EF005321F6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -65,6 +67,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E400D0EC2C375010007F3058 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E400D0F22C3750B3007F3058 /* GFEmptyStateView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E400D0ED2C37501A007F3058 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E486C0F12C2E324A007E8A30 /* GFButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		E400D0EE2C375024007F3058 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				E486C0F32C2E35E9007E8A30 /* GFTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		E400D0EF2C37502E007F3058 /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				E49A086B2C34B4DD0015900E /* GFAvatarImageView.swift */,
+			);
+			path = ImageViews;
+			sourceTree = "<group>";
+		};
+		E400D0F02C375038007F3058 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E44AC5FE2C30C3C500845C2D /* GFAlertVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E400D0F12C375067007F3058 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				E44AC5FA2C30C08800845C2D /* GFTitleLabel.swift */,
+				E44AC5FC2C30C27500845C2D /* GFBodyLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
 		E41D77292C3178B3005321F6 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,13 +129,13 @@
 		E41D772A2C317923005321F6 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				E400D0F12C375067007F3058 /* Labels */,
+				E400D0F02C375038007F3058 /* ViewControllers */,
+				E400D0EF2C37502E007F3058 /* ImageViews */,
+				E400D0EE2C375024007F3058 /* TextFields */,
+				E400D0ED2C37501A007F3058 /* Buttons */,
+				E400D0EC2C375010007F3058 /* Views */,
 				E432C7252C342D00003AD9B4 /* Cells */,
-				E44AC5FE2C30C3C500845C2D /* GFAlertVC.swift */,
-				E486C0F12C2E324A007E8A30 /* GFButton.swift */,
-				E486C0F32C2E35E9007E8A30 /* GFTextField.swift */,
-				E44AC5FA2C30C08800845C2D /* GFTitleLabel.swift */,
-				E44AC5FC2C30C27500845C2D /* GFBodyLabel.swift */,
-				E49A086B2C34B4DD0015900E /* GFAvatarImageView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -257,6 +308,7 @@
 				E44AC5FD2C30C27500845C2D /* GFBodyLabel.swift in Sources */,
 				E41D772F2C318410005321F6 /* Follower.swift in Sources */,
 				E44AC5FB2C30C08800845C2D /* GFTitleLabel.swift in Sources */,
+				E400D0F32C3750B3007F3058 /* GFEmptyStateView.swift in Sources */,
 				E4C4EE9B2C321D2A009F738A /* NetworkManager.swift in Sources */,
 				E44AC5F92C30B98000845C2D /* FollowerListVC.swift in Sources */,
 				E4C31E872C2E2A7F001AA56C /* FavouritesListVC.swift in Sources */,
