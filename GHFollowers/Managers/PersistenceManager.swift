@@ -38,7 +38,7 @@ enum PersistenceManager {
                     retrievedFavorites.removeAll { $0.login == favorite.login }
                 }
                 
-                completed(save(favorites: favorites))
+                completed(save(favorites: retrievedFavorites))
                 
             case .failure(let error):
                 completed(error)
@@ -65,7 +65,7 @@ enum PersistenceManager {
         do {
             let encoder = JSONEncoder()
             let encodedFavorites = try encoder.encode(favorites)
-            defaults.setValue(encodedFavorites, forKey: Keys.favorites)
+            defaults.set(encodedFavorites, forKey: Keys.favorites)
             return nil
         } catch {
             return .unableToFavorite
