@@ -13,17 +13,18 @@ protocol UserInfoVCDelegate: class {
 
 class UserInfoVC: GFDataLoadingVC {
     
-    let scrollView = UIScrollView()
-    let contentView = UIView()
+    let scrollView          = UIScrollView()
+    let contentView         = UIView()
     
-    let headerView = UIView()
-    let itemViewOne = UIView()
-    let itemViewTwo = UIView()
-    let dateLabel  = GFBodyLabel(textAlignment: .center)
+    let headerView          = UIView()
+    let itemViewOne         = UIView()
+    let itemViewTwo         = UIView()
+    let dateLabel           = GFBodyLabel(textAlignment: .center)
     var itemViews: [UIView] = []
     
     var username: String!
     weak var delegate: UserInfoVCDelegate!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +34,13 @@ class UserInfoVC: GFDataLoadingVC {
         getUserInfo()
     }
     
+    
     func configureViewController() {
         view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
     }
+    
     
     func configureScrollView() {
         view.addSubview(scrollView)
@@ -51,6 +54,7 @@ class UserInfoVC: GFDataLoadingVC {
         ])
         
     }
+    
     
     func getUserInfo() {
         NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
@@ -76,7 +80,7 @@ class UserInfoVC: GFDataLoadingVC {
     
     
     func layoutUI() {
-        let padding: CGFloat = 20
+        let padding: CGFloat    = 20
         let itemHeight: CGFloat = 140
         
         itemViews = [headerView, itemViewOne, itemViewTwo, dateLabel]
@@ -106,12 +110,14 @@ class UserInfoVC: GFDataLoadingVC {
         ])
     }
     
+    
     func add(childVC: UIViewController, to containerView: UIView) {
         addChild(childVC)
         containerView.addSubview(childVC.view)
         childVC.view.frame = containerView.bounds
         childVC.didMove(toParent: self)
     }
+    
     
     @objc func dismissVC() {
         dismiss(animated: true)
