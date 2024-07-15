@@ -46,3 +46,9 @@ class GFButton: UIButton {
         configuration?.imagePlacement = .leading
     }
 }
+
+@available(iOS 17, *)
+#Preview {
+    let button = GFButton(color: .red, title: "Set Date", systemImageName: "calendar")
+    return button
+}
