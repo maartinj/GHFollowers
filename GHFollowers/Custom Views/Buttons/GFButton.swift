@@ -47,8 +47,6 @@ class GFButton: UIButton {
     }
 }
 
-@available(iOS 17, *)
 #Preview {
-    let button = GFButton(color: .red, title: "Set Date", systemImageName: "calendar")
-    return button
+    GFButton(color: .blue, title: "Test Button", systemImageName: "pencil")
 }
