@@ -12,7 +12,6 @@ class GFTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UITabBar.appearance().tintColor         = .systemGreen
-        UITabBar.appearance().backgroundColor   = .systemGray4
         viewControllers                         = [createSearchNC(), createFavouritesNC()]
     }
     
